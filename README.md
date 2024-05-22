@@ -17,9 +17,9 @@ Clone this repository and then build the image:
 ```bash
 docker login nvcr.io
 docker build --pull -t \
-  isaac-sim:2023.1.0-ubuntu22.04 \
-  --build-arg ISAACSIM_VERSION=2023.1.0 \
-  --file Dockerfile.2023.1.0-ubuntu22.04 .
+  isaac-sim:2023.1.1-ubuntu22.04 \
+  --build-arg ISAACSIM_VERSION=2023.1.1 \
+  --file Dockerfile.2023.1.1-ubuntu22.04 .
 ```
 
 ## Usage
@@ -37,7 +37,7 @@ docker run --name isaac-sim --entrypoint bash -it --gpus all -e "ACCEPT_EULA=Y" 
   -v ~/docker/isaac-sim/logs:/root/.nvidia-omniverse/logs:rw \
   -v ~/docker/isaac-sim/data:/root/.local/share/ov/data:rw \
   -v ~/docker/isaac-sim/documents:/root/Documents:rw \
-  isaac-sim:2023.1.0-ubuntu22.04 \
+  isaac-sim:2023.1.1-ubuntu22.04 \
   ./runheadless.native.sh -v
 ```
 
@@ -57,7 +57,7 @@ docker run --name isaac-sim --entrypoint bash -it --gpus all -e "ACCEPT_EULA=Y" 
   -v ~/docker/isaac-sim/logs:/root/.nvidia-omniverse/logs:rw \
   -v ~/docker/isaac-sim/data:/root/.local/share/ov/data:rw \
   -v ~/docker/isaac-sim/documents:/root/Documents:rw \
-  isaac-sim:2023.1.0-ubuntu22.04 \
+  isaac-sim:2023.1.1-ubuntu22.04 \
   ./runapp.sh
 ```
 
